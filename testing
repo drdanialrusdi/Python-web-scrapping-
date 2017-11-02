@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 17 09:04:43 2017
+
+@author: drdanialrusdi
+"""
+
+from bs4 import BeautifulSoup as soup
+from urllib.request import urlopen as uReq
+
+Uclient=uReq("https://www.mudah.my/Kuala-Lumpur/Rooms-for-rent-2100?lst=0&fs=1&w=109&cg=2100&so=1&urg=1&st=u&mre=4&rg=1") 
+page_html=Uclient.read()
+Uclient.close()
+
+page_soup = soup(page_html,"html.parser")
